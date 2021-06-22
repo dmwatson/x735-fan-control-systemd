@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Copy the service file
 sudo cp pwm_fan_control.service /etc/systemd/system/pwm_fan_control.service
 sudo chown root:root /etc/systemd/system/pwm_fan_control.service
@@ -18,4 +18,4 @@ sudo systemctl daemon-Reload
 sudo systemctl enable pwm_fan_control
 sudo systemctl restart pwm_fan_control
 
-echo "X735 V2.5 PWM Fan Control Service installed!"
+printf "X735 V2.5 PWM Fan Control Service installed!"
