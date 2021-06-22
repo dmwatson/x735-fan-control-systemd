@@ -4,7 +4,7 @@ The [Geekworm X735 V2.5 power management board](https://wiki.geekworm.com/X735) 
 
 I have modified the script to work as a systemd service, and included a service file and installer. The script depends on the pigpio library and pigpiod daemon, which also doesn't seem to come with Ubuntu Server for Raspberry Pi LTS (at least as of this writing).
 
-To install pigpiod, you can download it from [here](http://abyz.me.uk/rpi/pigpio/download.html). It's only a couple of steps and installs painlessly.
+To install pigpiod, you can download it from [here](http://abyz.me.uk/rpi/pigpio/download.html). Or, as an alternative, you can run the install_pigpio.sh script from the repository here which will download, compile, and install it for you.
 
 ## Installing the Script
 
