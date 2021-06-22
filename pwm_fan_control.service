@@ -1,0 +1,16 @@
+[Unit]
+# Human readable name of the unit
+Description=X735 PWM Fan Control Daemon
+After=syslog.target pigpiod.service
+
+[Service]
+Type=notify
+# Command to run when the service starts
+ExecStart=/usr/bin/python /usr/local/lib/pwm_fan_control/pwm_fan_control.py
+Environment=PYTHONBUFFERED=1
+Restart=on-failure
+User=pwm_fan_control
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
