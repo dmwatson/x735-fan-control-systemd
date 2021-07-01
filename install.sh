@@ -7,6 +7,7 @@ sudo chmod 644 /etc/systemd/system/pwm_fan_control.service
 # Install the script
 sudo mkdir /usr/local/lib/pwm_fan_control
 sudo cp pwm_fan_control.py /usr/local/lib/pwm_fan_control/pwm_fan_control.py
+sudo cp pwm_fan_control.conf /usr/local/lib/pwm_fan_control/pwm_fan_control.conf
 sudo chown root:root /usr/local/lib/pwm_fan_control/pwm_fan_control.py
 sudo chmod 644 /usr/local/lib/pwm_fan_control/pwm_fan_control.py
 
