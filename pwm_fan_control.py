@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # Fan control daemon for the X735 V2.5 power management board
-import RPi.GPIO as GPIO
 import pigpio
 import time
 import os
@@ -93,8 +92,7 @@ def run_daemon():
 
      except KeyboardInterrupt:
           logger.info("X735: Shutdown signal received. Cleaning up GPIOs...\n")
-          pwm.set_PWM_dutycycle(pin, 0)
-          GPIO.cleanup()
+          pwm.stop()
           # Give a clean exit signal
           logger.info("X735: Shutting down\n")
           sys.exit(0)
